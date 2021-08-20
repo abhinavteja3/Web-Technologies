@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Basics od javascript</title>
+    </head>
+    <body>
+        <h1 id="p1" >IT is from h1 tag</h1><br>
+        <p1 id="id1">Change colour</p1>
+        <br>
+        <button type="button" onclick="displayDate()">Date</button>
+        <p style=display:inline id=date></p>
+        <button type="button" onclick=alert("Cautious!!")>Alert</button>
+
+        <script>
+           // document.getElementsByClassName("h1tag")
+            document.writeln("hello World")
+           // window.alert("Welcome to the page to continue press the ok button")
+            //var details={regno:"19bce7163",univ:"Vitap",display:function(){return this.regno+" "+this.univ}};
+            //document.writeln(details);
+            var num=[1,2,"hello"];
+            num.push('hey');
+            document.writeln(num);
+            document.getElementById("p1").style.color="red";
+            document.getElementBytag("p1").style.color="blue";
+            function displayDate()
+            {
+                document.getElementById("date").innerHTML=Date();
+            }
+        </script>
+    </body>
+</html>

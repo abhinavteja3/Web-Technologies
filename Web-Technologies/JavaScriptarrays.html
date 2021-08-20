@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JAVASCRIPT FILE</title>
+        <style>
+            h2{
+                color:red;
+            }
+        </style>
+        <script type="text/javascript">
+            document.writeln("Hello World");
+            var n=parseInt(prompt("Enter the number of elements in array"))
+            var arr=[]
+            var s=0
+            for(var i=0;i<n;i++)
+            {
+                arr[i]=parseInt(prompt("Enter the element"))
+                s=s+arr[i]
+            }
+            document.writeln("<h2>Sum element of Array " + s)
+            var avg=s/n;
+            document.writeln("<h2>Average of Array " + avg)    
+            var min=arr[0]
+            for(var i=0;i<n;i++)
+            {
+                if(min>arr[i])
+                {
+                   min=arr[i];
+                }
+            }
+            document.writeln("<h2>Minimum element of Array " + min)
+            var max=arr[0]
+            for(var i=0;i<n;i++)
+            {
+                if(max<arr[i])
+                {
+                   max=arr[i];
+                }
+            }
+            document.writeln("<h2>Maximum element of Array " + max)
+            var r=max-min
+            document.writeln("<h2>Maximum relative of Array " +r)
+            var temp=0
+            for(var i=0;i<n;i++)
+            {
+                for(var j=i+1;j<n;j++)
+                {
+                    if(arr[i]>arr[j])
+                    {
+                        temp=arr[i]
+                        arr[i]=arr[j]
+                        arr[j]=temp
+                    }
+                }
+            }
+            document.writeln("<h2>Sorted Array")
+            for(var i=0;i<n;i++)
+            {
+                document.write(arr[i])
+            }
+            document.writeln("<h2>Frequency of Each element in Array<br>")
+                var fr=[]
+        var R=-1
+        for(var i=0;i<n;i++)
+        {
+            var count=1
+            for(var j=i+1;j<n;j++)
+            {
+                if(arr[i]==arr[j])
+                {
+                    count++
+                    fr[j]=R;
+                }
+            }
+            if(fr[i]!=R)
+            {
+                fr[i]=count
+            }
+        }
+        for(var i=0;i<n;i++)
+        {
+            if(fr[i]!=R)
+            {
+                document.write("<br>"+arr[i]+"  -  "+fr[i])
+            }
+        }
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

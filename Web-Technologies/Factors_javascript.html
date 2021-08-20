@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> Form for Factors</title>
+</head>
+<body>
+<br>
+ <center><font-size="15"> FACTORS </font></center><br>
+<center>
+<label for ="number"> Enter Number</label>
+<input type="text" name="Enter A Number" id="Enter A Number"><br>
+<br>
+<br>
+<input type="button" value="Submit" onclick="factor()">
+<input type="button" value="Reset">
+<br>
+<br>
+<div id=d></div>
+<script type="text/javascript">
+function factor()
+{
+   x=document.getElementById("Enter A Number").value
+   x=parseInt(x)
+   if(Number.isInteger(x))
+   {
+   str=' ';
+   for(i=1;i<=x;i++)
+   {
+   if(x%i==0)
+   {
+   str=str+i+','
+   }
+   }
+   document.getElementById('d').innerHTML="Factors are:"+str
+   }
+   else {
+   document.getElementById('d').innerHTML="Enter Integer Only"
+   }
+   }
+   </script>
+  </center>
+</body>
+</html>

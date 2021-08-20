@@ -1,0 +1,120 @@
+<html>
+<head>
+<title> DETAILS</title>
+</head>
+<body>
+<h1 allign="center">Form Validation</h1>
+<div>
+<form action="#" autocomplete="off" onsubmit="return validation()">
+<table cellspacing="20" allign="center">
+<tr><td>Username:<input type="text" id="user" placeholder="Enter Username">
+<br><span id="username"></span>
+</td></tr>
+<tr><td>Password:<input type="Password" id="pass" placeholder="Enter Password">
+<br><span id="password"></span>
+</td></tr>
+<tr><td>Confirm Password:<input type="Password" id="conpass" placeholder="Confrim Password">
+<br><span id="confirmpassword"></span>
+</td></tr>
+<tr><td>Phone:<input type="text" id="phone" placeholder="Mobile Number(do not wrtite +91)">
+<br><span id="mobile"></span>
+</td></tr>
+<tr><td>E-mail:<input type="email" id="email" placeholder="E-mail(username@gmail.com)">
+<br><span id="email"></span>
+</td></tr>
+<tr><td><input type="submit" id="btn" placeholder=""></td></tr>
+<tr><td><input type="reset" id="btn" placeholder=""></td></tr>
+</table>
+</form>
+</div>
+<script type="text/javascript">
+function validation()
+{
+ var user = document.getElementById('user').value;
+ var pass = document.getElementById('pass').value;
+ var conpass = document.getElementById('conpass').value;
+ var mobile = document.getElementById('phone').value;
+ var email = document.getElementById('email').value;
+ if(user== "")
+{
+ document.getElementById('username').innerHTML="Please enter username";
+ return false;
+}
+if(user.length<=2)
+{
+ document.getElementById('username').innerHTML="Please enter atleast more than one character";
+ return false;
+}
+if(!isNaN(user))
+{
+ document.getElementById('username').innerHTML="Please enter only alphabets in the box";
+ return false;
+}
+else
+{
+ document.getElementById('username').innerHTML="";
+}
+if(pass== "")
+{
+ document.getElementById('password').innerHTML="Please enter required password";
+return false;
+}
+if(pass.length<8)
+{
+ document.getElementById('password').innerHTML="Please enter atleast 8 characters";
+return false;
+}
+if(pass.search(/[0-9]/)==-1)
+{
+ document.getElementById('password').innerHTML="Please enter atleast 1 number";
+return false;
+}
+if(pass.search(/[A-Z]/)==-1)
+{
+ document.getElementById('password').innerHTML="Please enter atleast 1 uppercase character";
+return false;
+}
+else
+{
+ document.getElementById('password').innerHTML="";
+}
+if(conpass!=pass)
+{
+ document.getElementById('confirmpassword').innerHTML="Please enter correct password";
+return false;
+}
+else
+{
+ document.getElementById('confirmpassword').innerHTML="";
+}
+if(phone== "")
+{
+ document.getElementById('mobile').innerHTML="Please enter mobile number";
+return false;
+}
+if(isNaN(phone))
+{
+ document.getElementById('mobile').innerHTML="Please enter only numbers";
+ return false;
+}
+if(phone.length<10 || mobile.length>10)
+{
+ document.getElementById('mobile').innerHTML="Please enter 10 digit mobile number";
+ return false;
+}
+else
+{
+ document.getElementById('mobile').innerHTML="";
+}
+if(email== "")
+{
+ document.getElementById('email').innerHTML="Please enter email address";
+}
+else
+{
+ document.getElementById('email').innerHTML="";
+}
+}
+</script>
+</body>
+</html>

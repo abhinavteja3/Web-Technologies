@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms Internal Styling</title>
+	<style type="text/css">
+		H2{
+			color: red;
+		}
+		h1{
+			color: blue;
+		}
+		B{
+			color: red ; font-style:italic ;font-size: 20pt
+		}
+		b{
+			color: rgb(0, 128, 6);
+		}
+		h4{
+			color: red;font-size: 25pt
+		}
+		E{
+			color: red;font-size: 25pt
+		}
+	</style>
+</head>
+<body>
+<form>
+	<H1>FORMS</H1>
+	<B>USERNAME:<INPUT TYPE = "TEXT" NAME="Usname" MAXLENGTH="10"> </B><BR>
+	
+	<b>PASSWORD:<INPUT TYPE = "PASSWORD" NAME="PASSWORD"></b><BR>
+	<br><H4>GENDER</H4>
+	<B>MALE<INPUT TYPE = "RADIO" NAME="GENDER"></B><br>
+	<B>FEMALE<INPUT TYPE = "RADIO" NAME="GENDER"></B><br>
+	<B>OTHER<INPUT TYPE = "RADIO" NAME="GENDER"></B><br>
+	<br><E>ENTER THE COMMENTS</E><BR>
+	<textarea rows="4" cols="50" name="comment" form="usrform">Enter comments here...</textarea><BR>
+	<BR><H2>SUBJECTS :</H2>
+	<B>Problem Solving Using Java<INPUT TYPE="CHECKBOX" NAME="SUBJECTS"></B><br>
+	<B>Data Structures Using Java<INPUT TYPE="CHECKBOX" NAME="SUBJECTS"></B><br>
+	<B>Object Oriented Programming Using Java<INPUT TYPE="CHECKBOX" NAME="SUBJECTS"></B><br>
+	<B>Discrete Mathematics<INPUT TYPE="CHECKBOX" NAME="SUBJECTS"></B><br>
+</form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        function add(){
+            var x = document.createElement("LI");
+            var elmt=document.getElementById("txt").value;
+            var t = document.createTextNode(elmt);
+            x.appendChild(t);
+            var list1=document.getElementById("lst");
+
+            list1.insertBefore(x,list1.childNodes[4]);
+        }
+        function del(){
+            var list = document.getElementById("lst");
+            list.removeChild(list.childNodes[0]);
+        }
+        function paint(){
+            var x = document.querySelectorAll("li:nth-child(odd)");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.backgroundColor = "blue";
+            }
+        }
+    </script>
+</head>
+<html>
+    <body>
+        <label for=txt>Name:</label>
+        <input type="text" name="myfname" id=txt><br><br>
+        <button onclick="add()">ADD Sports</button>
+        <button onclick="del()">REMOVE SPORTS</button>
+        <button onclick="paint()">UPDATE</button>
+        <ol id=lst>
+           
+            <li>VolleyBall</li>
+            <li>BasketBall</li>
+            <li>Cricket</li>
+        </ol>
+        <p id="demo"></p>
+    </body>
+</html>
